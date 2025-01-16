@@ -3,13 +3,13 @@
 <div class="container">
   <div class="row">
     <% @movies.each do |movie| %>
-      <div class="col-md-4">
-        <div class="card mb-3">
-          <div class="card-body">
-            <img src="<%= movie.poster_url %>" class="img-fluid"alt="<%= movie.title %>">
-            <strong>Title |</strong> <%= movie.title %> <br>
-            <strong>Overview |</strong> <%= movie.overview %> <br>
-            <strong>Rating |</strong> <%= movie.rating %> <br>
+      <div class="col-sm-6 border-0">
+        <div class="d-flex card align-items-center mb-3">
+          <img src="<%= movie.poster_url %>" alt="" class="rounded img-fluid w-50">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text"><%= movie.overview %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
