@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get "movies", to: "movies#index"
 
   # User can see the details of a movie
-  get "movies/:id", to: "movies#show"
+  get "movies/:id", to: "movies#show", as: :movie
 end

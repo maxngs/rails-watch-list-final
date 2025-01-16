@@ -1,4 +1,8 @@
-<h1>Welcome on the movies page</h1>
+<nav class="navbar navbar-light bg-light mb-3">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Movie Watch List</span>
+  </div>
+</nav>
 
 <div class="container">
   <div class="row">
@@ -9,7 +13,7 @@
           <div class="card-body text-center">
             <h5 class="card-title"><%= movie.title %></h5>
             <p class="card-text"><%= movie.overview %></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <%= link_to "Go to page details", movie_path(movie) %>
           </div>
         </div>
       </div>

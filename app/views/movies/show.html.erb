@@ -1,11 +1,15 @@
 <h1>Movie details page</h1>
 
-<img src="<%= @movie.poster_url %>" class="img-fluid img-thumbnail" alt="">
-<h2>Title:</h2>
-<h3><%= @movie.title %></h3>
+<div class="mx-5">
+  <img src="<%= @movie.poster_url %>" alt="" style="width: 200px">
+  <h2>Title:</h2>
+  <h3><%= @movie.title %></h3>
 
-<h2>Description:</h2>
-<p><%= @movie.overview %></p>
+  <h2>Description:</h2>
+  <p><%= @movie.overview %></p>
 
-<h2>Rating:</h2>
-<p><%= @movie.rating %></p>
+  <h2>Rating:</h2>
+  <p><%= @movie.rating %></p>
+
+  <%= link_to "Back to homepage", movies_path %>
+</div>
