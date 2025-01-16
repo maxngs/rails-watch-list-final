@@ -1,1 +1,18 @@
 <h1>Welcome on the movies page</h1>
+
+<div class="container">
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="<%= movie.poster_url %>" class="img-fluid"alt="<%= movie.title %>">
+            <strong>Title |</strong> <%= movie.title %> <br>
+            <strong>Overview |</strong> <%= movie.overview %> <br>
+            <strong>Rating |</strong> <%= movie.rating %> <br>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

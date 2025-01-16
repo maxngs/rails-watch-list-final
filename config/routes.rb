@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   # User can see all the lists
   get "movies", to: "movies#index"
+
+  # User can see the details of a movie
+  get "movies/:id", to: "movies#show"
 end
