@@ -16,4 +16,10 @@ Rails.application.routes.draw do
 
   # User can see the details of a movie
   get "lists/:id", to: "lists#show", as: :list
+
+  # BOOKMARKS
+  get "lists/:id/bookmarks/new", to: "bookmarks#new", as: :new_list_bookmark
+  post "lists/:id/bookmarks", to: "bookmarks#create", as: :list_bookmark
+
+  delete "bookmarks/:id", to: "bookmarks#destroy", as: :bookmark
 end
