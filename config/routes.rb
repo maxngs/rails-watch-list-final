@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # User can create a movie
   get "lists/new", to: "lists#new"
-  post "lists/:id", to: "lists#create"
+  post "lists", to: "lists#create"
 
   # User can see the details of a movie
   get "lists/:id", to: "lists#show", as: :list
