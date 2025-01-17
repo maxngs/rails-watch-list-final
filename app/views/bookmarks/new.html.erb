@@ -1,9 +1,11 @@
 <h2>Add a new bookmark to <%= @list.name %></h2>
 
-<%= simple_form_for [@list, @bookmark] do |l| %>
-  <%= l.association :movie %>
-  <%= l.input :comment %>
-  <%= l.submit "Add bookmark"%>
-<% end %>
+<div class="container">
+  <%= simple_form_for [@list, @bookmark] do |l| %>
+    <%= l.association :movie %>
+    <%= l.input :comment %>
+    <%= l.submit "Add bookmark"%>
+  <% end %>
 
-<%= link_to "Back to lists", list_path(@list) %>
+  <%= link_to "Back to lists", list_path(@list) %>
+</div>
