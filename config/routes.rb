@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   # User can see all the lists
-  get "movies", to: "movies#index"
+  get "lists", to: "lists#index"
+
+  # User can create a movie
+  get "lists/new", to: "lists#new"
+  post "lists/:id", to: "lists#create"
 
   # User can see the details of a movie
-  get "movies/:id", to: "movies#show", as: :movie
+  get "lists/:id", to: "lists#show", as: :list
 end
